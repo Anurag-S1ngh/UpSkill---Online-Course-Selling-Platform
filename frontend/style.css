@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #4d5bfc;
+  --secondary: #040105;
+  --accent: #120e1d;
+  --background: #f9f9f9;
+}
