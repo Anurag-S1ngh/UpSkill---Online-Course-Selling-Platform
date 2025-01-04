@@ -8,9 +8,107 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --primary: #4d5bfc;
   --secondary: #040105;
   --accent: #120e1d;
+  --highlight: #ff2a68; /* A bright red that provides a strong contrast */
+
   --background: #f9f9f9;
+  --titleFont: "Montserrat", serif;
+  --bodyFont: "Inter", serif;
+}
+
+.header {
+  margin: 0.8rem 0.8rem;
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: var(--titleFont);
+  font-weight: 700;
+  border-radius: 0.4rem;
+}
+
+.grid_12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.nav {
+  padding: 0.5rem 0.9rem;
+}
+
+.nav div:nth-child(1) {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+}
+
+.nav div:nth-child(2) {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav div a {
+  color: var(--background);
+}
+
+.nav_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.8rem;
+  height: 100%;
+  width: 110%;
+  top: 0;
+  left: 100%;
+  background-color: var(--primary);
+  padding-bottom: 4rem;
+  z-index: 10;
+}
+
+.pre_loader_1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  background-color: var(--accent);
+}
+
+.pre_loader_2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  background-color: var(--highlight);
+}
+
+.close,
+.add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+}
+
+.close {
+  top: 1.25rem;
+  right: 3.2rem;
+}
+
+.add {
+  top: 1.25rem;
+  right: 1.7rem;
 }

@@ -2,17 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.css">
 </head>
 
-<body>
-    <header>
-        <nav></nav>
+
+<body data-scroll-container>
+    <header class="header">
+        <nav class="nav">
+            <div>UpSkill</div>
+            <div class="pre_loader_1"></div>
+            <div class="pre_loader_2"></div>
+            <div class="nav_container">
+                <div>
+                    <a href="">Home</a>
+                    <a href="">Courses</a>
+                    <a href="">Teach on UpSkill</a>
+                </div>
+                <div>
+                    <a href="">SignUp</a>
+                    <a href="">SignIn</a>
+                </div>
+                <div class="close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="add">
+            <i class="ri-add-large-line"></i>
+        </div>
     </header>
-    <section id="landing_page"></section>
+    <main>
+        <section id="landing_page"></section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="./animation.js"></script>
     <script src="./index.js"></script>
 </body>
 
