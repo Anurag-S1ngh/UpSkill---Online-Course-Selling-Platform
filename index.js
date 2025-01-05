@@ -5,12 +5,18 @@ require('dotenv').config();
 
 const mongooseConnectionString = process.env.String;
 
+app.use(express.static(__dirname + '/frontend'));
+
 //routes
 const { userRouter } = require("./routes/user");
 const { courseRouter } = require("./routes/course");
 const { adminRouter } = require('./routes/admin');
 
 app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/frontend/index.html");
+})
 
 app.use('/user', userRouter);
 app.use('/course', courseRouter);

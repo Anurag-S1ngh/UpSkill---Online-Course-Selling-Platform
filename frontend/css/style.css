@@ -121,13 +121,13 @@ main {
 
 .landing_page {
   background: linear-gradient(to bottom, var(--primary) 60%, #f9f9f9);
-  height: 80vh;
+  height: 75vh;
   border-radius: 0.4rem;
   color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.75rem;
+  gap: 1.25rem;
   align-items: center;
   margin: 0 0.8rem;
   font-size: 4rem;

@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const express = require('express');
 const { userMiddleware } = require("../middleware/userAuth");
 const jwt = require("jsonwebtoken");
 require('dotenv').config()
@@ -6,6 +7,14 @@ const userRouter = Router();
 const bcrypt = require("bcrypt");
 const { z } = require("zod");
 const { userModel, purchaseModel, courseModel } = require("../db");
+const path = require("path");
+
+userRouter.use(express.static(path.join(__dirname, '../frontend')));
+
+userRouter.get('/signup', (req, res) => {
+    const filePath = path.join(__dirname, "../frontend/signUpUser.html");
+    res.sendFile(filePath);
+})
 
 userRouter.post("/signup", async (req, res) => {
 
