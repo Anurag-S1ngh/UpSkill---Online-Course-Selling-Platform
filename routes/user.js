@@ -22,43 +22,38 @@ userRouter.get('/signup', (req, res) => {
 })
 
 userRouter.post("/signup", async (req, res) => {
-
     const requiredBody = z.object({
         email: z.string().email(),
         password: z.string()
             .min(8, "Password must be at least 8 characters.")
             .max(30, "Password length cannot exceed 30 characters.")
             .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-`~=+]).*$/, "Password must contain at least one digit, one lowercase letter, one uppercase letter, and one special character."),
-        firstName: z.string().min(2).max(30),
-        lastName: z.string().min(2).max(30),
+        username: z.string().min(2).max(30),
     });
-
 
     const parsedData = requiredBody.safeParse(req.body);
     if (parsedData.success) {
         const email = req.body.email;
         const password = req.body.password;
-        const firstName = req.body.firstName;
-        const lastName = req.body.lastName;
+        const username = req.body.username;
         const hashedPassword = await bcrypt.hash(password, 10);
         try {
             await userModel.create({
                 email: email,
                 password: hashedPassword,
-                firstName: firstName,
-                lastName: lastName
+                username,
             })
         } catch (e) {
-            res.json({ error: "error: " + e });
+            res.json({ error: "database not created " + e });
             return;
         }
         res.json({
-            msg: "you have signed up"
+            msg: "done"
         })
         return
     } else {
         res.json({
-            msg: "error occurred" + parsedData.error
+            msg: "some error occurred" + parsedData.error
         })
     }
 })

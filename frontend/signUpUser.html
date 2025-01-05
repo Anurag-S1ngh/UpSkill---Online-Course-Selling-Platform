@@ -19,31 +19,31 @@
             <h1>SignUp as Learner</h1>
             <div class="input_container">
                 <div class="username">
-                    <input type="text" placeholder="">
+                    <input id="signUpUserUsername" type="text" placeholder="" required>
                     <div class="placeholder">
                         <p>Username</p>
                     </div>
                 </div>
                 <div class="email">
-                    <input type="text" placeholder="">
+                    <input id="signUpUserEmail" type="text" placeholder="" required>
                     <div class="placeholder">
                         <p>email</p>
                     </div>
                 </div>
                 <div class="password">
-                    <input type="password" placeholder="">
+                    <input id="signUpUserPassword" type="password" placeholder="">
                     <div class="placeholder">
                         <p>password</p>
                     </div>
                 </div>
                 <div class="confirm_password">
-                    <input type="password" placeholder="">
+                    <input id="signUpUserConfirmPassword" type="password" placeholder="" required>
                     <div class="placeholder">
                         <p>confirm password</p>
                     </div>
                 </div>
                 <div class="button_container">
-                    <a class="signUpButton" href="">
+                    <a id="signUpUser" class="signUpButton">
                         <button>SignUp</button>
                         <div class="signUpButtonCircle">
                             <i class="first_arrow ri-arrow-right-up-line"></i>
@@ -55,9 +55,11 @@
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="./animation/animationSignUpUser.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
