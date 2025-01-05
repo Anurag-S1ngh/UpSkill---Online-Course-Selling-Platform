@@ -15,6 +15,10 @@ adminRouter.get("/signup", (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/signUpAdmin.html'));
 })
 
+adminRouter.get("/signin", (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/signin.html'));
+})
+
 adminRouter.post('/signup', async (req, res) => {
     const requiredBody = z.object({
         email: z.string().email(),

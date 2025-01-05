@@ -7,23 +7,21 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
-    <link rel="stylesheet" href="./css/signUpUser.css">
+    <link rel="stylesheet" href="./css/signIn.css">
 </head>
 
 <body>
     <main data-scroll-container>
-        <div class="signUpUser_column_1">
-            <img src="./assets/image 11.png" alt="">
+        <div class="signIn_column_1">
+            <img src="./assets/image-2.png" alt="">
         </div>
-        <div class="signUpUser_column_2">
-            <h1>SignUp as Learner</h1>
+        <div class="signIn_column_2">
+            <h1>SignIn</h1>
             <div class="input_container">
-                <div class="username">
-                    <input type="text" placeholder="">
-                    <div class="placeholder">
-                        <p>Username</p>
-                    </div>
-                </div>
+                <select id="options" name="options">
+                    <option value="learner" selected>Learner</option>
+                    <option value="mentor">Mentor</option>
+                </select>
                 <div class="email">
                     <input type="text" placeholder="">
                     <div class="placeholder">
@@ -36,21 +34,18 @@
                         <p>password</p>
                     </div>
                 </div>
-                <div class="confirm_password">
-                    <input type="password" placeholder="">
-                    <div class="placeholder">
-                        <p>confirm password</p>
-                    </div>
-                </div>
                 <div class="button_container">
-                    <a class="signUpButton" href="">
-                        <button>SignUp</button>
-                        <div class="signUpButtonCircle">
+                    <a class="signInButton" href="">
+                        <button>SignIn</button>
+                        <div class="signInButtonCircle">
                             <i class="first_arrow ri-arrow-right-up-line"></i>
                             <i class="second_arrow ri-arrow-right-up-line"></i>
                         </div>
                     </a>
-                    <a class="signInButton" href="/user/signin">SignIn</a>
+                    <div class="signUp_container">
+                        <a class="signUpButton" href="/user/signup">SignUp as Learner</a>
+                        <a class="signUpButton" href="/admin/signup">Mentor</a>
+                    </div>
                 </div>
             </div>
         </div>

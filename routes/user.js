@@ -11,6 +11,11 @@ const path = require("path");
 
 userRouter.use(express.static(path.join(__dirname, '../frontend')));
 
+userRouter.get('/signin', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/signin.html'));
+})
+
+
 userRouter.get('/signup', (req, res) => {
     const filePath = path.join(__dirname, "../frontend/signUpUser.html");
     res.sendFile(filePath);

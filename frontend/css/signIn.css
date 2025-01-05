@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.signIn_column_1 {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary: #4d5bfc;
+  --secondary: #040105;
+  --accent: #120e1d;
+  --highlight: #ff2a68; /* A bright red that provides a strong contrast */
+
+  --background: #f9f9f9;
+  --titleFont: "Montserrat", serif;
+  --bodyFont: "Inter", serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signIn_column_2 {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 3rem;
+  padding: 0.8rem;
+  width: 425px;
+}
+
+.signIn_column_2 h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: var(--titleFont);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.input_container {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  font-family: var(--titleFont);
+}
+
+.input_container input {
+  font-family: var(--titleFont);
+  color: var(--secondary);
+  padding: 0.7rem 1.5rem;
+  width: 22rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid hsla(285, 67%, 1%, 0.12);
+}
+
+.input_container input::placeholder {
+  color: var(--accent);
+  opacity: 0.3;
+}
+
+.email,
+.password {
+  position: relative;
+}
+
+.placeholder p {
+  pointer-events: none;
+  position: absolute;
+  top: 0.7rem;
+  left: 1rem;
+  /* left: 0.75rem;
+    top: -0.6rem; */
+  background-color: #fff;
+  padding: 0 0.5rem;
+  color: var(--secondary);
+  font-size: 1rem;
+  /* color: var(--primary); */
+  /* font-size: 0.8rem; */
+  opacity: 0.3;
+}
+
+.input_container input:focus {
+  outline: 1px solid hsla(235, 97%, 65%, 0.6);
+  border: 1px solid transparent;
+}
+
+.button_container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.signInButton {
+  display: flex;
+  gap: 0.1rem;
+  padding: 0.1rem;
+  border: 1px solid burlywood;
+  border-radius: 1.1rem;
+  width: 6.7rem;
+}
+
+.signInButton button {
+  font-size: 1rem;
+  background-color: var(--accent);
+  border-radius: 1rem;
+  color: var(--background);
+  outline: none;
+  border: none;
+  padding: 0.3rem 0.8rem;
+}
+
+.signInButtonCircle {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--background);
+  width: 100%;
+  border-radius: 50%;
+}
+
+.signUpButton {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.signInButtonCircle i {
+  position: absolute;
+  font-size: 1.1rem;
+}
+
+.second_arrow {
+  transform: translate(-100%, 100%);
+}
+
+#options {
+  all: unset;
+  appearance: none;
+  font-family: var(--titleFont);
+  color: var(--secondary);
+  padding: 0.7rem 1.5rem;
+  width: 19rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid hsla(285, 67%, 1%, 0.12);
+}
+
+#options:focus {
+  outline: 1px solid hsla(235, 97%, 65%, 0.6);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.signUp_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: end;
+}
