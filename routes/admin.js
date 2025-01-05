@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const express = require("express");
 const { adminMiddleware } = require("../middleware/adminAuth")
 const jwt = require("jsonwebtoken");
 require('dotenv').config();
@@ -6,6 +7,13 @@ const adminRouter = Router();
 const bcrypt = require("bcrypt");
 const { z } = require("zod");
 const { adminModel, courseModel } = require("../db");
+const path = require("path");
+
+adminRouter.use(express.static(path.join(__dirname, '../frontend')));
+
+adminRouter.get("/signup", (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/signUpAdmin.html'));
+})
 
 adminRouter.post('/signup', async (req, res) => {
     const requiredBody = z.object({
