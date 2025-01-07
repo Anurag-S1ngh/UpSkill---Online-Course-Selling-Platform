@@ -29,22 +29,19 @@ adminRouter.post('/signup', async (req, res) => {
                 /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-=+\/`~]).*$/,
                 "Password must contain at least one digit, one lowercase letter, one uppercase letter, and one special character."
             ),
-        firstName: z.string().min(2, "First name must be at least 2 characters.").max(50, "First name cannot exceed 50 characters."),
-        lastName: z.string().min(2, "Last name must be at least 2 characters.").max(50, "Last name cannot exceed 50 characters.")
+        username: z.string().min(2, "First name must be at least 2 characters.").max(50, "First name cannot exceed 50 characters."),
     });
 
     const parsedData = requiredBody.safeParse(req.body);
     if (parsedData.success) {
         const email = req.body.email;
         const password = req.body.password;
-        const firstName = req.body.firstName;
-        const lastName = req.body.lastName;
+        const username = req.body.username;
         const hashedPassword = await bcrypt.hash(password, 10);
         await adminModel.create({
             email: email,
             password: hashedPassword,
-            firstName: firstName,
-            lastName: lastName
+            username: username,
         })
         res.json({ msg: "you have signed up" });
         return
