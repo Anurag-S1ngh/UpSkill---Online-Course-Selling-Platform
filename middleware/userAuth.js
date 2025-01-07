@@ -16,10 +16,12 @@ function userMiddleware(req, res, next) {
                 })
             }
         } catch (e) {
-            next();
+            res.json({msg: "not logged in"});
+            return    
         }
     } else {
-        next();
+        res.json({msg: "not logged in"});
+        return
     }
 }
 

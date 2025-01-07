@@ -15,7 +15,8 @@ function adminMiddleware(req, res, next) {
             return
         }
     } else {
-        next();
+        res.json({msg: "not logged in"});
+        return
     }
 }
 

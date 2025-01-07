@@ -59,24 +59,31 @@ userRouter.post("/signup", async (req, res) => {
 })
 
 userRouter.post("/signin", async (req, res) => {
+    console.log("user signin");
     const email = req.body.email;
     const password = req.body.password;
     const user = await userModel.findOne({
         email: email,
     })
     if (user) {
-        const comparePassword = await bcrypt.compare(password, user.password)
+        const comparePassword = await bcrypt.compare(password, user.password);
         if (comparePassword) {
             const token = jwt.sign({ id: user._id }, process.env.JWT_USER_SECRET);
             res.json({
-                msg: token
+                token: token,
+                msg: "done",
             })
             return
+        } else{
+            res.status(401).json({
+                msg: "wrong password",
+            })
         }
     } else {
         res.json({
             msg: "You haven't Sign up",
         })
+        return
     }
 })
 

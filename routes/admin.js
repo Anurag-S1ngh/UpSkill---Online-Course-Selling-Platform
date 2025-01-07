@@ -8,6 +8,7 @@ const bcrypt = require("bcrypt");
 const { z } = require("zod");
 const { adminModel, courseModel } = require("../db");
 const path = require("path");
+const { error } = require("console");
 
 adminRouter.use(express.static(path.join(__dirname, '../frontend')));
 
@@ -38,37 +39,44 @@ adminRouter.post('/signup', async (req, res) => {
         const password = req.body.password;
         const username = req.body.username;
         const hashedPassword = await bcrypt.hash(password, 10);
-        await adminModel.create({
-            email: email,
-            password: hashedPassword,
-            username: username,
-        })
-        res.json({ msg: "you have signed up" });
-        return
+        try {
+            await adminModel.create({
+                email: email,
+                password: hashedPassword,
+                username: username,
+            })
+            res.json({ msg: "done" });
+            return
+        } catch (e) {
+            res.json({ error: "database not created " + e });
+            return
+        }
     } else {
         res.json({
-            msg: parsedData.error,
+            error: parsedData.error,
         })
     }
 })
 
 adminRouter.post('/signin', async (req, res) => {
+    console.log('admin signin');
     const email = req.body.email;
     const password = req.body.password;
     const admin = await adminModel.findOne({
         email: email,
     })
     if (admin) {
-        const comparePassword = bcrypt.compare(password, admin.password);
+        console.log(admin.password);
+        const comparePassword = await bcrypt.compare(password, admin.password);
         if (comparePassword) {
             const token = jwt.sign({ id: admin._id }, process.env.JWT_ADMIN_SECRET);
             res.json({
-                msg: 'you have logged in',
+                msg: 'done',
                 token: token
             })
             return
         } else {
-            res.json({
+            res.status(401).json({
                 msg: "wrong password"
             })
             return
@@ -87,7 +95,6 @@ adminRouter.delete('/course', adminMiddleware, async (req, res) => {
         adminId
     })
     if (courses.length != 0) {
-        console.log('hi');
         await courseModel.deleteOne({
             title
         })
