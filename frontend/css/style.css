@@ -27,6 +27,10 @@ main {
   padding-top: 2rem;
 }
 
+section{
+  margin: 0 0.8rem ;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -205,4 +209,109 @@ main {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+}
+
+.section_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  position: relative;
+  /* background-color: rgba(218, 112, 214, 0.354); */
+}
+
+.featured_courses_section{
+  margin-top: 2rem;
+}
+
+.section_title_line{
+  width: 100%;
+  border: 0;
+  border-top: 0.15px solid var(--accent);
+}
+
+.section_title h3{
+  background-color: #fff;
+  padding: 0 1rem;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--accent);
+  font-family: var(--titleFont);
+}
+
+.featured_courses_filter{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.featured_courses_filter div{
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-family: var(--titleFont);
+  font-size: 0.7rem !important;
+  /* transition: background-color ease 0.05s, color ease 0.05s; */
+}
+
+.featured_courses_carousel{
+  position: relative;
+  margin-top: 1.5rem;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel_track{
+  display: flex;
+  gap: 0.85rem;
+  transition: all ease-in-out 0.5s;
+}
+
+.carousel_item {
+  width: calc(100vw - 4rem);
+}
+
+.carousel_item img {
+  width: calc(100vw - 4rem);
+  height: 200px;
+  border-radius: 0.15rem;
+  object-fit: cover;
+}
+
+.carousel_item h6{
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--titleFont);
+  font-weight: 600;
+}
+
+.carousel_item p{
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+  font-family: var(--bodyFont);
+}
+
+.carousel_controls{
+  position: absolute;
+  top: 45%;
+  transform: translate(0%,-100%);
+  left: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel_controls div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--background);
+  background-color: hsla(0, 0%, 0%, 0.8);
+  backdrop-filter: blur(10px);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
 }

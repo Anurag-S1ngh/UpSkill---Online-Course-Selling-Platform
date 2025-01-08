@@ -1,7 +1,7 @@
 const scroll = new LocomotiveScroll.default({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    multiplier: 1.2,
+    multiplier: 1,
     friction: 0.1
 });
 
