@@ -246,12 +246,16 @@ section{
 }
 
 .featured_courses_filter div{
-  color: var(--accent);
   padding: 0.2rem 0.6rem;
   border-radius: 1rem;
   font-family: var(--titleFont);
   font-size: 0.7rem !important;
   /* transition: background-color ease 0.05s, color ease 0.05s; */
+}
+
+.web_dev{
+  background-color: var(--primary);
+  color: var(--background);
 }
 
 .featured_courses_carousel{
@@ -262,14 +266,21 @@ section{
   overflow: hidden;
 }
 
-.carousel_track{
+.carousel_track {
   display: flex;
   gap: 0.85rem;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-out 0.05s;
+  scroll-snap-type: x mandatory; /* Enable horizontal snap */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow-x: auto; /* Allow horizontal scroll */
+  width: 100%; /* Make sure the track takes full width */
 }
 
+
 .carousel_item {
-  width: calc(100vw - 4rem);
+  flex: 0 0 auto; /* Prevent items from growing or shrinking */
+  scroll-snap-align: start; /* Align the start of each item */
+  width: calc(100vw - 4rem); /* Adjust width according to your design */
 }
 
 .carousel_item img {
@@ -314,4 +325,85 @@ section{
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;
+}
+
+.ai_track,
+.dsa_track{
+  display: none;
+}
+
+.carousel_track > .carousel_item:not(:last-child) {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+.benefits_section{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.benefits_section img{
+  width: 50%;
+  display: none;
+}
+
+.benefits_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.benefits_text h3{
+  font-family: var(--titleFont);
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.benefits_description{
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+  font-family: var(--bodyFont);
+  font-size: 0.9rem;
+}
+
+.benefits_title{
+  margin-bottom: 2rem;
+}
+
+.benefits_description p:nth-child(1){
+  background-color: #EEDC5B;
+  padding: 0.3rem 0.7rem;
+  border-radius : 3px;
+  transform: rotate(-2.5deg);
+  transform-origin: top left;
+}
+
+.benefits_description p:nth-child(2){
+  background-color: #E9BBDE;
+  padding: 0.3rem 0.7rem;
+  border-radius : 3px;
+  transform: rotate(2.5deg);
+  transform-origin: top right;
+}
+
+.benefits_description p:nth-child(3){
+  background-color: #113C42;
+  padding: 0.3rem 0.7rem;
+  border-radius : 3px;
+  color: var(--background);
+  transform: rotate(-2.5deg);
+  transform-origin: top left;
+}
+
+.benefits_description p:nth-child(4){
+   padding: 0.3rem 0.7rem;
+  border-radius : 3px;
+  background-color: #B97DA8;
+  color: var(--background);
+  transform: rotate(2.5deg);
+  transform-origin: top right;
 }
