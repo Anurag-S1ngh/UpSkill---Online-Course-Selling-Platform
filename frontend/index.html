@@ -1,175 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.css">
-</head>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.css"
+    />
+  </head>
 
-
-<body data-scroll-container>
+  <body data-scroll-container>
     <header class="header">
-        <div class="add">
-            <i class="ri-add-large-line"></i>
+      <div class="add">
+        <i class="ri-add-large-line"></i>
+      </div>
+      <nav class="nav">
+        <div>UpSkill</div>
+        <div class="pre_loader_1"></div>
+        <div class="pre_loader_2"></div>
+        <div class="nav_container">
+          <div>
+            <a href="">Home</a>
+            <a href="">Courses</a>
+            <a href="/admin/signup">Teach on UpSkill</a>
+          </div>
+          <div>
+            <a href="/user/signup">SignUp</a>
+            <a href="/user/signin">SignIn</a>
+          </div>
+          <div class="close">
+            <i class="ri-close-large-line"></i>
+          </div>
         </div>
-        <nav class="nav">
-            <div>UpSkill</div>
-            <div class="pre_loader_1"></div>
-            <div class="pre_loader_2"></div>
-            <div class="nav_container">
-                <div>
-                    <a href="">Home</a>
-                    <a href="">Courses</a>
-                    <a href="/admin/signup">Teach on UpSkill</a>
-                </div>
-                <div>
-                    <a href="/user/signup">SignUp</a>
-                    <a href="/user/signin">SignIn</a>
-                </div>
-                <div class="close">
-                    <i class="ri-close-large-line"></i>
-                </div>
-            </div>
-        </nav>
-
+      </nav>
     </header>
     <main>
-        <section class="landing_page">
-            <div class="title">
-                <h1>UpSkill</h1>
+      <section class="landing_page">
+        <div class="title">
+          <h1>UpSkill</h1>
+        </div>
+        <div class="description">
+          <div class="explore_button">
+            <button>Explore</button>
+            <div class="arrow_container">
+              <i class="first_arrow ri-arrow-right-up-line"></i>
+              <i class="second_arrow ri-arrow-right-up-line"></i>
             </div>
-            <div class="description">
-                <div class="explore_button">
-                    <button>Explore</button>
-                    <div class="arrow_container">
-                        <i class="first_arrow ri-arrow-right-up-line"></i>
-                        <i class="second_arrow ri-arrow-right-up-line"></i>
-                    </div>
-                </div>
-                <p>Designed by industry experts, our courses pave the way to mastery and career success.</p>
+          </div>
+          <p>
+            Designed by industry experts, our courses pave the way to mastery
+            and career success.
+          </p>
+        </div>
+      </section>
+      <section class="featured_courses_section">
+        <div class="section_title">
+          <hr class="section_title_line" />
+          <h3>Explore Inspiring Online Courses</h3>
+        </div>
+        <div class="featured_courses_filter">
+          <div class="web_dev">Web Dev</div>
+          <div class="ai">AI/ML</div>
+          <div class="dsa">DSA</div>
+        </div>
+        <div class="featured_courses_carousel">
+          <div class="carousel_track web_track">
+            <a class="carousel_item">
+              <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8"
+                alt=""
+              />
+              <h6>Full Stack Web Dev Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>Frontend Web Dev Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h6>Backend Web Dev Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>Web Dev Crash Course</h6>
+              <p>Anon</p>
+            </a>
+          </div>
+          <div class="carousel_track ai_track">
+            <a class="carousel_item">
+              <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8"
+                alt=""
+              />
+              <h6>AI Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>ML Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h6>NumPy Bootcamp</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>AI/ML Crash Course</h6>
+              <p>Anon</p>
+            </a>
+          </div>
+          <div class="carousel_track dsa_track">
+            <a class="carousel_item">
+              <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8"
+                alt=""
+              />
+              <h6>DSA C++</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>DSA JAVA</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h6>DSA Python</h6>
+              <p>Anon</p>
+            </a>
+            <a class="carousel_item">
+              <img
+                src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww"
+                alt=""
+              />
+              <h6>DSA JavaScript</h6>
+              <p>Anon</p>
+            </a>
+          </div>
+          <div class="carousel_controls">
+            <div class="previous_button">
+              <i class="ri-arrow-left-s-line"></i>
             </div>
-        </section>
-        <section class="featured_courses_section">
-            <div class="section_title">
-                <hr class="section_title_line">
-                <h3>
-                    Explore Inspiring Online Courses
-                </h3>
+            <div class="next_button">
+              <i class="ri-arrow-right-s-line"></i>
             </div>
-            <div class="featured_courses_filter">
-                <div class="web_dev">Web Dev</div>
-                <div class="ai">AI/ML</div>
-                <div class="dsa">DSA</div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits_section">
+        <img src="./assets/image 1.png" alt="" />
+        <div class="benefits_text">
+          <div class="benefits_title">
+            <h3>Your Career,<br />Powered by Us</h3>
+          </div>
+          <div class="benefits_description">
+            <p>Job-ready skills taught by industry experts</p>
+            <p>Certifications recognized by top employers</p>
+            <p>Exclusive job listings and career resources</p>
+            <p>Exclusive job listings and career resources</p>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials_section">
+        <div class="section_title">
+          <hr class="section_title_line" />
+          <h3>Testimonials</h3>
+        </div>
+        <div class="testimonials_carousel">
+          <!-- <div class="testimonials_carousel_controls">
+            <div class="testimonials_previous_button" onclick="moveSlide(-1)">
+              <i class="ri-arrow-left-s-line"></i>
             </div>
-            <div class="featured_courses_carousel">
-                <div class="carousel_track web_track">
-                    <a class="carousel_item">
-                        <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
-                         <img src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8" alt="">
-                        <h6>Full Stack Web Dev Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>Frontend Web Dev Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <h6>Backend Web Dev Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>Web Dev Crash Course</h6>
-                        <p>Anon</p>
-                    </a>
-                </div>
-                <div class="carousel_track ai_track">
-                    <a class="carousel_item">
-                        <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
-                         <img src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8" alt="">
-                        <h6>AI Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>ML Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <h6>NumPy Bootcamp</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>AI/ML Crash Course</h6>
-                        <p>Anon</p>
-                    </a>
-                </div>
-                <div class="carousel_track dsa_track">
-                    <a class="carousel_item">
-                        <!-- <img src="https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
-                         <img src="https://plus.unsplash.com/premium_photo-1669814666004-04619db0c87b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY2fHx8ZW58MHx8fHx8" alt="">
-                        <h6>DSA C++</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1481966115753-963394378f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>DSA JAVA</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        <h6>DSA Python</h6>
-                        <p>Anon</p>
-                    </a>
-                    <a class="carousel_item">
-                        <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFic3RyYWN0fGVufDB8fDB8fHww" alt="">
-                        <h6>DSA JavaScript</h6>
-                        <p>Anon</p>
-                    </a>
-                </div>
-                <div class="carousel_controls">
-                    <div class="previous_button">
-                        <i class="ri-arrow-left-s-line"></i>
-                    </div>
-                    <div class="next_button">
-                        <i class="ri-arrow-right-s-line"></i>
-                    </div>
-                </div>
+            <div class="testimonials_next_button" onclick="moveSlide(1)">
+              <i class="ri-arrow-right-s-line"></i>
             </div>
-        </section>
-        <section class="benefits_section">
-            <img src="./assets/image 1.png" alt="">
-            <div class="benefits_text">
-                <div class="benefits_title">
-                    <h3>Your Career,<br>Powered by Us</h3>
-                </div>
-                <div class = "benefits_description">
-                     <p>Job-ready skills taught by industry experts</p>
-                    <p>Certifications recognized by top employers</p>
-                    <p>Exclusive job listings and career resources</p>
-                    <p>Exclusive job listings and career resources</p>
-                </div>
-           </div>
-        </section>
+          </div> -->
+          <div class="testimonials_carousel_track">
+            <div class="testimonial_item">
+              <p>
+                I never thought I could learn so much in such a short time! UpSkill's courses are structured perfectly for beginners and professionals alike. The hands-on projects gave me real-world experience, and now I feel confident in my new skills.
+              </p>
+              <h6>~Anon</h6>
+            </div>
+            <div class="testimonial_item">
+              <p>
+                I never thought I could learn so much in such a short time! UpSkill's courses are structured perfectly for beginners and professionals alike. The hands-on projects gave me real-world experience, and now I feel confident in my new skills.
+              </p>
+              <h6>~Anon</h6>
+            </div>
+            <div class="testimonial_item">
+              <p>
+                I never thought I could learn so much in such a short time! UpSkill's courses are structured perfectly for beginners and professionals alike. The hands-on projects gave me real-world experience, and now I feel confident in my new skills.
+              </p>
+              <h6>~Anon</h6>
+            </div>
+            <div class="testimonial_item">
+              <p>
+                I never thought I could learn so much in such a short time! UpSkill's courses are structured perfectly for beginners and professionals alike. The hands-on projects gave me real-world experience, and now I feel confident in my new skills.
+              </p>
+              <h6>~Anon</h6>
+            </div>
+            <div class="testimonial_item">
+              <p>
+                I never thought I could learn so much in such a short time! UpSkill's courses are structured perfectly for beginners and professionals alike. The hands-on projects gave me real-world experience, and now I feel confident in my new skills.
+              </p>
+              <h6>~Anon</h6>
+            </div>
+          </div>
+        </div>
+        
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="./animation/animationIndex.js"></script>
     <script src="./index.js"></script>
-</body>
-
+  </body>
 </html>

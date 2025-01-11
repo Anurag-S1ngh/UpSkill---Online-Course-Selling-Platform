@@ -42,13 +42,25 @@ function resetStyles() {
 }
 
 function setTrack(newTrack, newItems) {
+  // Reset the previous track to the start
+  currentTrack.scrollTo({
+    left: 0, // Scroll to the start (first item)
+    behavior: 'smooth' // Smooth scroll
+  });
+
+  // Update the current track and items
+  currentTrack.style.display = "none"; // Hide the previous track
   currentTrack = newTrack;
   currentItems = newItems;
   currentIndex = 0; // Reset index for the new track
+  
+  // Show the selected track and reset its scroll position
   currentTrack.style.display = "flex"; // Show the selected track
-  currentTrack.style.transform = "translateX(0)"; // Reset position
+  currentTrack.scrollTo({ left: 0, behavior: 'smooth' }); // Reset the new track position
   updateButtons();
 }
+
+
 
 webDevButton.addEventListener("click", () => {
   resetStyles();
@@ -82,3 +94,26 @@ nextButton.addEventListener("click", () => {
 // Initialize default state
 setTrack(webTrack, webItems);
 
+let currentIndex2 = 0;
+
+// Function to move the second carousel slide
+function moveSlide(step) {
+  const slides = document.querySelectorAll('.testimonial_item');
+  const totalSlides = slides.length ;
+  currentIndex2 = (currentIndex2 + step + totalSlides) % totalSlides;  // Calculate the new index
+  const track = document.querySelector('.testimonials_carousel_track');
+  const slideWidth = slides[0].offsetWidth;  // Get the width of a single slide
+  const gap = 20;  // The gap value in pixels between slides
+  
+  track.style.transform = `translateX(-${(currentIndex2 * (slideWidth + gap))}px)`;  // Update the track position considering the gap
+}
+
+let autoSlideInterval = setInterval(() => moveSlide(1), 2000);
+
+const carousel = document.querySelector('.testimonials_carousel');
+carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+
+// Resume the carousel after hover
+carousel.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+});
