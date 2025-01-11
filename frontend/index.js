@@ -1,6 +1,6 @@
 const webTrack = document.querySelector(".web_track");
 const aiTrack = document.querySelector(".ai_track");
-const dsaTrack = document.querySelector('.dsa_track');
+const dsaTrack = document.querySelector(".dsa_track");
 const webItems = Array.from(webTrack.children);
 const aiItems = Array.from(aiTrack.children);
 const dsaItems = Array.from(dsaTrack.children);
@@ -23,7 +23,7 @@ function moveCarousel(index) {
   const itemWidth = currentItems[0].getBoundingClientRect().width; // Dynamically get item width
   currentTrack.scrollTo({
     left: index * itemWidth, // Scroll to the desired index
-    behavior: 'smooth' // Smooth scroll
+    behavior: "smooth", // Smooth scroll
   });
   currentIndex = index;
   updateButtons();
@@ -45,7 +45,7 @@ function setTrack(newTrack, newItems) {
   // Reset the previous track to the start
   currentTrack.scrollTo({
     left: 0, // Scroll to the start (first item)
-    behavior: 'smooth' // Smooth scroll
+    behavior: "smooth", // Smooth scroll
   });
 
   // Update the current track and items
@@ -53,14 +53,12 @@ function setTrack(newTrack, newItems) {
   currentTrack = newTrack;
   currentItems = newItems;
   currentIndex = 0; // Reset index for the new track
-  
+
   // Show the selected track and reset its scroll position
   currentTrack.style.display = "flex"; // Show the selected track
-  currentTrack.scrollTo({ left: 0, behavior: 'smooth' }); // Reset the new track position
+  currentTrack.scrollTo({ left: 0, behavior: "smooth" }); // Reset the new track position
   updateButtons();
 }
-
-
 
 webDevButton.addEventListener("click", () => {
   resetStyles();
@@ -98,22 +96,22 @@ let currentIndex2 = 0;
 
 // Function to move the second carousel slide
 function moveSlide(step) {
-  const slides = document.querySelectorAll('.testimonial_item');
-  const totalSlides = slides.length ;
-  currentIndex2 = (currentIndex2 + step + totalSlides) % totalSlides;  // Calculate the new index
-  const track = document.querySelector('.testimonials_carousel_track');
-  const slideWidth = slides[0].offsetWidth;  // Get the width of a single slide
-  const gap = 20;  // The gap value in pixels between slides
-  
-  track.style.transform = `translateX(-${(currentIndex2 * (slideWidth + gap))}px)`;  // Update the track position considering the gap
+  const slides = document.querySelectorAll(".testimonial_item");
+  const totalSlides = slides.length - 2;
+  currentIndex2 = (currentIndex2 + step + totalSlides) % totalSlides; // Calculate the new index
+  const track = document.querySelector(".testimonials_carousel_track");
+  const slideWidth = slides[0].offsetWidth; // Get the width of a single slide
+  const gap = 20; // The gap value in pixels between slides
+
+  track.style.transform = `translateX(-${currentIndex2 * (slideWidth + gap)}px)`; // Update the track position considering the gap
 }
 
 let autoSlideInterval = setInterval(() => moveSlide(1), 2000);
 
-const carousel = document.querySelector('.testimonials_carousel');
-carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+const carousel = document.querySelector(".testimonials_carousel");
+carousel.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
 
 // Resume the carousel after hover
-carousel.addEventListener('mouseleave', () => {
+carousel.addEventListener("mouseleave", () => {
   autoSlideInterval = setInterval(() => moveSlide(1), 5000);
 });
