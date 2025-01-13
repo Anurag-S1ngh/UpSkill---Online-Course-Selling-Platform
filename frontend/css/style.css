@@ -440,7 +440,7 @@ section {
 
 .testimonials_carousel_track {
   display: flex;
-  transition: transform 1s ease;
+  transition: transform 1.25s ease;
   justify-content: center; /* Center the items */
   gap: 20px; /* Adjust the gap between items */
 }
@@ -490,4 +490,75 @@ section {
   color: var(--background);
   display: flex;
   justify-content: space-around;
+}
+
+.benefits2_section {
+  margin-top: 2rem;
+}
+
+.benefits2_img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits2_img img {
+  width: 80%;
+  border-radius: 15px;
+}
+
+.benefits2_description_container {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.benefits2_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--titleFont);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.benefits2_number {
+  border-radius: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  font-size: 0.8rem;
+}
+
+.benefits2_title h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.benefits2_description {
+  text-align: center;
+  font-family: var(--bodyFont);
+  font-weight: 300;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits2_description p {
+  width: 80%;
+}
+
+.benefits2_item {
+  padding: 0.8rem 0;
+  border-bottom: 0.75px solid hsl(0, 0%, 70%);
+}
+
+.benefits2_item:nth-child(3) {
+  border: 0;
 }

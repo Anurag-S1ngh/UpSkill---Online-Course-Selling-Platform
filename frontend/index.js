@@ -106,7 +106,7 @@ function moveSlide(step) {
   track.style.transform = `translateX(-${currentIndex2 * (slideWidth + gap)}px)`; // Update the track position considering the gap
 }
 
-let autoSlideInterval = setInterval(() => moveSlide(1), 2000);
+let autoSlideInterval = setInterval(() => moveSlide(1), 5000);
 
 const carousel = document.querySelector(".testimonials_carousel");
 carousel.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
