@@ -464,7 +464,7 @@ section {
   justify-content: space-between;
   flex: 0 0 auto; /* Prevent the items from shrinking or growing */
   padding: 20px;
-  background-color: hsla(235, 97%, 65%, 0.3);
+  background-color: hsla(235, 97%, 65%, 0.4);
   border-radius: 5px;
   text-align: center;
   width: 100%; /* Set a fixed width for each item */
@@ -794,6 +794,116 @@ section {
   }
 
   .carousel_item {
-    width: calc(35vw - 4rem);
+    width: calc(45vw - 4rem);
+  }
+
+  .benefits_title h3 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefits_description p {
+    font-size: 1.25rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .trustedBy_section {
+    padding: 3rem;
+  }
+
+  .trustedBy_section h6 {
+    font-size: 1.15rem;
+  }
+
+  .companies {
+    font-size: 3rem;
+  }
+
+  .benefits2_img {
+    margin-left: 1.5rem;
+  }
+
+  .benefits2_img img {
+    width: 65%;
+  }
+
+  .benefits2_number {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+  }
+
+  .benefits2_title {
+    margin-bottom: 0;
+  }
+
+  .benefits2_title h6 {
+    font-size: 1.5rem;
+  }
+
+  .benefits2_description_container {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  .benefits2_description_container .benefits2_item:nth-child(1) {
+    padding-top: 0;
+  }
+
+  .benefits2_description {
+    width: 20rem;
+  }
+
+  .benefits2_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .footer {
+    padding: 2rem 3rem;
+  }
+
+  .footer_company_description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_company_logo h6 {
+    font-size: 2rem;
+  }
+
+  .footer_company_logo p {
+    width: 15rem;
+  }
+
+  .footer_links {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .footer_links div h6 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer_links div p {
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  .footer_social_links {
+    gap: 1.25rem;
+  }
+
+  .footer_social_links a {
+    font-size: 1.5rem;
+  }
+
+  .copyright_container p {
+    font-size: 0.7rem;
+    margin-top: 0.85rem;
   }
 }
