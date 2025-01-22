@@ -1,8 +1,3 @@
-const scroll = new LocomotiveScroll.default({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-});
-
 document.querySelector(".add").addEventListener("click", () => {
   const navAnimationTimeline = gsap.timeline();
   navAnimationTimeline.to(".pre_loader_1", {
