@@ -142,7 +142,6 @@ main {
 .signInButton {
   font-size: 1rem;
   color: var(--accent);
-  text-decoration: underline;
 }
 
 .signUpButtonCircle i {
@@ -152,4 +151,80 @@ main {
 
 .second_arrow {
   transform: translate(-100%, 100%);
+}
+
+@media screen and (min-width: 475px) {
+  body {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+
+  main {
+    width: 100vw;
+    height: calc(100vh - 4rem);
+    padding: 0;
+    margin: 2rem;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .signUpUser_column_1 img {
+    object-fit: cover;
+    width: 200%;
+    height: 100%;
+  }
+  .signUpUser_column_1 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: burlywood;
+  }
+
+  .signUpUser_column_2 {
+    width: 60%;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    gap: 4rem;
+  }
+
+  .button_container {
+    margin-top: 2rem;
+  }
+
+  .signUpUser_column_2 h1 {
+    font-size: 5rem;
+  }
+
+  .input_container input {
+    width: 30rem;
+  }
+
+  #options {
+    width: 7rem;
+  }
+
+  .signUpButton {
+    width: 7.7rem;
+  }
+
+  .signUpButton button {
+    font-size: 1.25rem;
+  }
+
+  .signInButton:hover {
+    text-decoration: underline;
+  }
+
+  .signInButton {
+    font-size: 1.25rem;
+  }
 }
