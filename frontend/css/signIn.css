@@ -33,6 +33,12 @@ main {
   align-items: center;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .signIn_column_2 {
   display: flex;
   height: 100%;
@@ -67,7 +73,7 @@ main {
   width: 22rem;
   border-radius: 0.4rem;
   font-size: 1rem;
-  border: 1px solid hsla(285, 67%, 1%, 0.12);
+  border: 1px solid hsla(285, 67%, 1%, 0.2);
 }
 
 .input_container input::placeholder {
@@ -171,9 +177,80 @@ main {
   box-shadow: none;
 }
 
+.signUpButton:hover {
+  text-decoration: underline;
+}
+
 .signUp_container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: end;
+}
+
+@media screen and (min-width: 475px) {
+  body {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+
+  main {
+    width: 100vw;
+    height: calc(100vh - 4rem);
+    padding: 0;
+    margin: 2rem;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .signIn_column_1 img {
+    object-fit: cover;
+    width: 200%;
+    height: 100%;
+  }
+  .signIn_column_1 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: burlywood;
+  }
+
+  .signIn_column_2 {
+    width: 50%;
+    justify-content: flex-start;
+    padding: 3rem;
+  }
+
+  .button_container {
+    margin-top: 4rem;
+  }
+
+  .signIn_column_2 h1 {
+    font-size: 5rem;
+  }
+
+  .input_container input {
+    width: 30rem;
+  }
+
+  #options {
+    width: 7rem;
+  }
+
+  .signInButton {
+    width: 7.7rem;
+  }
+
+  .signInButton button {
+    font-size: 1.25rem;
+  }
 }

@@ -1,60 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
-    <link rel="stylesheet" href="./css/signIn.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css"
+    />
+    <link rel="stylesheet" href="./css/signIn.css" />
+  </head>
 
-<body>
-    <main data-scroll-container>
-        <div class="signIn_column_1">
-            <img src="./assets/image-2.png" alt="">
-        </div>
-        <div class="signIn_column_2">
-            <h1>SignIn</h1>
-            <div class="input_container">
-                <select id="options" name="options">
-                    <option value="learner" selected>Learner</option>
-                    <option value="mentor">Mentor</option>
-                </select>
-                <div class="email">
-                    <input id="emailSignIn" type="text" placeholder="" required>
-                    <div class="placeholder">
-                        <p>email</p>
-                    </div>
-                </div>
-                <div class="password">
-                    <input id="passwordSignIn" type="password" placeholder="" required>
-                    <div class="placeholder">
-                        <p>password</p>
-                    </div>
-                </div>
-                <div class="button_container">
-                    <a id="signIn" class="signInButton">
-                        <button>SignIn</button>
-                        <div class="signInButtonCircle">
-                            <i class="first_arrow ri-arrow-right-up-line"></i>
-                            <i class="second_arrow ri-arrow-right-up-line"></i>
-                        </div>
-                    </a>
-                    <div class="signUp_container">
-                        <a class="signUpButton" href="/user/signup">SignUp as Learner</a>
-                        <a class="signUpButton" href="/admin/signup">Mentor</a>
-                    </div>
-                </div>
+  <body>
+    <main>
+      <div class="signIn_column_1">
+        <img src="./assets/image-2.png" alt="" />
+      </div>
+      <div class="signIn_column_2">
+        <h1>SignIn</h1>
+        <div class="input_container">
+          <select id="options" name="options">
+            <option value="learner" selected>Learner</option>
+            <option value="mentor">Mentor</option>
+          </select>
+          <div class="email">
+            <input id="emailSignIn" type="text" placeholder="" required />
+            <div class="placeholder">
+              <p>email</p>
             </div>
+          </div>
+          <div class="password">
+            <input
+              id="passwordSignIn"
+              type="password"
+              placeholder=""
+              required
+            />
+            <div class="placeholder">
+              <p>password</p>
+            </div>
+          </div>
+          <div class="button_container">
+            <a id="signIn" class="signInButton">
+              <button>SignIn</button>
+              <div class="signInButtonCircle">
+                <i class="first_arrow ri-arrow-right-up-line"></i>
+                <i class="second_arrow ri-arrow-right-up-line"></i>
+              </div>
+            </a>
+            <div class="signUp_container">
+              <a class="signUpButton" href="/user/signup"
+                >SignUp as <span>Learner</span></a
+              >
+              <a class="signUpButton" href="/admin/signup">Mentor</a>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="./animation/animationSignUpUser.js"></script>
     <script src="./signIn.js"></script>
-</body>
-
+  </body>
 </html>
