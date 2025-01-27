@@ -145,7 +145,7 @@ section {
   gap: 1rem;
   background-color: var(--secondary);
   color: var(--background);
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding: 1.5rem 0.8rem 1rem 0.8rem;
 }
 
@@ -231,6 +231,119 @@ section {
   font-family: var(--titleFont);
 }
 
+.input_section {
+  display: flex;
+  justify-content: center;
+}
+
+.input_section_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 1rem;
+}
+
+.input_section_container input,
+textarea {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #120e1d40;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: var(--bodyFont);
+}
+
+.fileUpload {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-upload {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #4d5bfc40;
+  color: indigo;
+  font-family: var(--titleFont);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.custom-upload:hover {
+  background-color: var(--highlight);
+  color: var(--background);
+  border-color: var(--primary);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.add_courses_category {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.category_item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1.5px solid #ccc;
+  outline: none;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the checkbox when checked */
+.category_item input[type="checkbox"]:checked {
+  background-color: #007bff; /* Change the background color when checked */
+  border-color: #007bff;
+}
+
+/* Style the label */
+.category_item p {
+  font-size: 0.8rem;
+  color: #333;
+  cursor: pointer;
+  font-family: var(--bodyFont);
+}
+
+.add_courses_category h3 {
+  font-family: var(--titleFont);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.add_courses_category_container {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.category_item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.create_course_button {
+  background-color: var(--primary);
+  outline: none;
+  border: 0;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  color: var(--background);
+  margin-top: 0.5rem;
+  border-radius: 0.2rem;
+}
+
 @media screen and (min-width: 1024px) {
   .nav_container {
     flex-direction: row;
@@ -272,7 +385,7 @@ section {
   }
 
   .section_title h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .user_courses_title {
